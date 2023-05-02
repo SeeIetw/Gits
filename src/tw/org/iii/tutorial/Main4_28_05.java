@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Main4_28_05 {//TCP receive
+public class Main4_28_05 {//TCP receive (is stabler than UDP
 	public static void main(String[] args) {
 		try(ServerSocket server = new ServerSocket(9957)) {
 			Socket socket = server.accept();
