@@ -22,7 +22,7 @@ public class MySign extends JFrame {
 	private MydrawerV3 myDrawer;
 	private JButton clear, undo, redo, changeColor;
 	private JButton save, load, jpg;
-
+	private MyClock clock;
 	public MySign() {
 		super("Sign");
 
@@ -37,6 +37,7 @@ public class MySign extends JFrame {
 		load = new JButton("Load");
 		jpg = new JButton("Save JPG");
 		changeColor = new JButton("Change Color");
+		clock = new MyClock();
 
 		JPanel top = new JPanel(new FlowLayout()); // div in html
 		top.add(clear);
@@ -46,7 +47,7 @@ public class MySign extends JFrame {
 		top.add(load);
 		top.add(jpg);
 		top.add(changeColor);
-
+		top.add(clock);
 		add(top, BorderLayout.NORTH);
 
 		clear.addActionListener(new ActionListener() {

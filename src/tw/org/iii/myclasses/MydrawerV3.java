@@ -37,7 +37,7 @@ public class MydrawerV3 extends JPanel {
 	public boolean saveLines(String fname) {
 		try(FileOutputStream fout = new FileOutputStream(fname);
 				ObjectOutputStream oout = new ObjectOutputStream(fout))
-		//auto-close
+			//auto-close
 		{
 			oout.writeObject(pointsLists);
 			oout.flush();			
