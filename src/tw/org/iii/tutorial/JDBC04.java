@@ -54,6 +54,14 @@ public class JDBC04 {
 		
 		Connection conn = DriverManager.getConnection(
 				"jdbc:mysql://localhost/iii", prop);
+		
+		Statement stmt = conn.createStatement();
+		//1.delete from food
+		stmt.executeUpdate("DELETE FROM food");
+		//2.ALTER TABLE food AUTO_INCREMENT = 1
+		stmt.executeUpdate("ALTER TABLE food AUTO_INCREMENT = 1");
+		
+		
 		String sql="INSERT INTO food(name,address,tel,pic1,lat,lng) VALUES "
 				+ "(?,?,?,?,?,?)";
 		PreparedStatement pstmt = conn.prepareStatement(sql);

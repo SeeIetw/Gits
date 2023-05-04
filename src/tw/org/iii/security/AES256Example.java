@@ -10,5 +10,6 @@ public class AES256Example {
     System.out.println(originalString);
     System.out.println(encryptedString);
     System.out.println(decryptedString);
+
   }
 }

@@ -26,18 +26,39 @@ public class AES256 {
 		random = new SecureRandom();
 		
 		SALT = new byte[16];
-		random.nextBytes(SALT);
-		for (byte b : SALT) {
-			System.out.print(b+" ");
+//		random.nextBytes(SALT);
+		
+		
+		for(int i=0;i<SALT.length;i++) {
+			SALT[i] = 1;
 		}
-		System.out.println();
+		//-------------------------
+//		StringBuffer sb = new StringBuffer();
+//		for (byte b : SALT) {
+//			System.out.print(b+" ");
+//			sb.append((char)b);
+//		}
+//		System.out.println();
+//		byte[] comeback = new byte[16];
+//		for(int i=0;i<comeback.length;i++) {
+//			comeback[i] = (byte)sb.charAt(i);
+//		}
+//		System.out.println();
+//		for (byte b : comeback) {
+//			System.out.print(b+" ");
+//		}
+		
+		//-----------------------------
 		byte[] bytesIV = new byte[16];
-	    random.nextBytes(bytesIV);
-	    ivspec = new IvParameterSpec(bytesIV);
-	    for (byte b : bytesIV) {
-	    	System.out.print(b+" ");
+//	    random.nextBytes(bytesIV);
+		for(int i=0;i<bytesIV.length;i++) {
+			bytesIV[i] = 2;
 		}
-	    System.out.println();
+	    ivspec = new IvParameterSpec(bytesIV);
+//	    for (byte b : bytesIV) {
+//	    	System.out.print(b+" ");
+//		}
+//	    System.out.println();
 	}
 
 	public static String encrypt(String strToEncrypt) {

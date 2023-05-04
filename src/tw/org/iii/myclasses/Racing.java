@@ -31,6 +31,7 @@ public class Racing extends JFrame {
 			lanes[i] = new JLabel((i + 1) + ".");
 			add(lanes[i]);
 		}
+
 		setSize(800, 480);
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
