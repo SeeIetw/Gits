@@ -30,6 +30,9 @@ public class Bike implements Serializable{
 	public void downSpeed() {
 		speed = speed < 1 ? 1 : speed * 0.7;
 	}
-	
+	@Override
+	public String toString() {
+		return "Bike: "+speed;
+	}
 	
 }
